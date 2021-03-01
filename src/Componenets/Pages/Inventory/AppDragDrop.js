@@ -3,7 +3,7 @@ import { green, orange } from "@material-ui/core/colors";
 import React, { Component } from "react";
 import "./App.css";
 
-export default class AppDragDropDemo extends Component {
+export default class AppDragDrop extends Component {
   state = {
     tasks: [
       { name: "Learn Angular", category: "wip", bgcolor: "yellow" },

@@ -1,5 +1,5 @@
 import React from 'react'
-import AppDragDropDemo from './AppDragDropDemo'
+import AppDragDrop from './AppDragDrop'
 import NewItem from "./NewItem";
 function App() {
     
@@ -7,11 +7,11 @@ function App() {
     return (
         <>
         <NewItem/>
-        <AppDragDropDemo/>
-        <AppDragDropDemo />
-        <AppDragDropDemo/>
-        <AppDragDropDemo/>
-        <AppDragDropDemo />
+        <AppDragDrop/>
+        <AppDragDrop />
+        <AppDragDrop/>
+        <AppDragDrop/>
+        <AppDragDrop />
         
         
         </>
