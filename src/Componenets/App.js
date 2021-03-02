@@ -1,6 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
+
 import Grid from "@material-ui/core/Grid";
 import Header from "./Header";
 import NavBar from "./NavBar";
@@ -16,31 +15,54 @@ import Settings from "./Pages/Settings";
 
 function App() {
   return (
-    <div>
-      <Grid container spacing={0}>
-        <Grid item xs={12}>
-          <Router>
-            <Header />
-          </Router>
-        </Grid>
-        <br></br>
-        <Grid item xs={2}>
-          <Router>
-            <NavBar />
+    // <div>
+    //   <Grid container spacing={0}>
+    //     <Grid item xs={12}>
+    //       <Router>
+    //         <Header />
+    //       </Router>
+    //     </Grid>
+    //     <br></br>
+    //     <Grid item xs={2}>
+    //       <Router>
+    //         <NavBar />
             
-          </Router>
-        </Grid>
-        <br></br>
-        <Grid item xs={10}>
+    //       </Router>
+    //     </Grid>
+    //     <br></br>
+    //     <Grid item xs={10}>
           
         
             
-            <Inventory/>
+    //         <Inventory/>
           
         
-        </Grid>
-      </Grid>
+    //     </Grid>
+    //   </Grid>
+    // </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+    <Router>
+             <Header />
+    </Router>
     </div>
+    
+  </div>
+  <div class="row">
+    <div class="col-2">
+    <Router>
+          <NavBar />
+    </Router>
+    </div>
+    <div class="col">
+    <Inventory/>
+    </div>
+    
+  </div>
+</div>
+
   );
 }
 

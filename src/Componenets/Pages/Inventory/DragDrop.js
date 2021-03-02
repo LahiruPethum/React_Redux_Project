@@ -4,13 +4,14 @@ import React, { useState} from "react";
 import styled from "styled-components";
 import Draggable from "./Draggable";
 import Droppable from "./Droppable";
+import './Inventory.css'
 
 const Wrapper = styled.div`
 
 position: relative;
-margin: 0px;
+margin: 10px;
 width: 100%;
-height: 60px;
+height: 100vh;
 
 padding: 0;
 background-color: rgb(243, 228, 96);
@@ -18,9 +19,9 @@ background-color: rgb(243, 228, 96);
 border-radius: 7px;
 float: left;
 flex-direction: row;
-border-right: 1px dotted;
+
     display: flex;
-    flex-direction: row;
+  
 `;
 
 const Item = styled.div`
@@ -28,18 +29,26 @@ const Item = styled.div`
   color: #555;
   background-color:orange;
   border-radious: 3px;
+  position: relative;
+  float: left;
+flex-direction: row;
+
 `;
 
 const droppableStyle = {
   
   backgroundColor: "yellow",
-  width: "250px",
-  height: "200px",
-  margin: "32px",
+  width: "200px",
+  height: "100px",
+  margin: "10px ",
   padding:"10px",
-  display:"flex"
-  
+  display:"flex",
+  position: "relative"
 };
+
+const containerId = {
+ 
+}
 
 // function newItemComp (){
 //   document.getElementById('containerId').prepend((
@@ -97,13 +106,14 @@ const [item, setItem] = useState(
 
 
     return (
-      <div>
-        <div className='addnew'>
+      <div className='container-drag'>
         
-        <button className = 'btn btn-success ' style={{marginLeft:'1000px', top:'100px'}} onClick={addNewItem}>Add</button>
-        </div>
         
         <Wrapper id='containerId'>
+        <div className='addnew'>
+        
+        <button className = 'btn btn-success ' style={{marginLeft:'0px', top:'10px'}} onClick={addNewItem}>Add</button>
+        </div>
           <div> 
           <Droppable id="dr1" style={droppableStyle}>
 
@@ -124,7 +134,8 @@ const [item, setItem] = useState(
 
           <Droppable  style={droppableStyle}/>
           <Droppable  style={droppableStyle}/>
-         
+          <Droppable  style={droppableStyle}/>
+          <Droppable  style={droppableStyle}/>
 
           
           </div> 
@@ -132,7 +143,8 @@ const [item, setItem] = useState(
           <Droppable  style={droppableStyle}/>
           <Droppable  style={droppableStyle}/>
           <Droppable  style={droppableStyle}/>
-          
+          <Droppable  style={droppableStyle}/>
+          <Droppable  style={droppableStyle}/>
           
 
           
@@ -141,29 +153,15 @@ const [item, setItem] = useState(
           <Droppable  style={droppableStyle}/>
           <Droppable  style={droppableStyle}/>
           <Droppable  style={droppableStyle}/>
-          
+          <Droppable  style={droppableStyle}/>
+          <Droppable  style={droppableStyle}/>
           
 
           
           </div> 
-          <div>
-          <Droppable  style={droppableStyle}/>
-          <Droppable  style={droppableStyle}/>
-          <Droppable  style={droppableStyle}/>
           
           
-
-          
-          </div> 
-          <div>
-          <Droppable  style={droppableStyle}/>
-          <Droppable  style={droppableStyle}/>
-          <Droppable  style={droppableStyle}/>
-          
-          
-
-          
-          </div> 
+           
         </Wrapper>
       </div>
     );

@@ -1,0 +1,25 @@
+.Inventory {
+    text-align: center;
+    width: 95%;
+    margin: 15px auto;
+  }
+  .container-drag {
+    text-align: center;
+  }
+  .droppableStyle {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    margin: 5px auto;
+    line-height: 1em;
+  }
+
+  .droppable {
+    position: absolute;
+    width: 150px;
+    height: 100vh;
+    right: 0;
+    top: 10;
+    background-color: #9E9E9E;
+    border-left: 1px dotted;
+  }
