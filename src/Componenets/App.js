@@ -33,10 +33,10 @@ function App() {
         <br></br>
         <Grid item xs={10}>
           
-        <Router>
+        
             
             <Inventory/>
-          </Router>
+          
         
         </Grid>
       </Grid>

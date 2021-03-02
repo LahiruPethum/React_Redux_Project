@@ -6,10 +6,21 @@ import Draggable from "./Draggable";
 import Droppable from "./Droppable";
 
 const Wrapper = styled.div`
-  width: 100%;
-  padding: 32px;
-  display: flex;
-  justify-content: center;
+
+position: relative;
+margin: 0px;
+width: 100%;
+height: 60px;
+
+padding: 0;
+background-color: rgb(243, 228, 96);
+
+border-radius: 7px;
+float: left;
+flex-direction: row;
+border-right: 1px dotted;
+    display: flex;
+    flex-direction: row;
 `;
 
 const Item = styled.div`
@@ -20,6 +31,7 @@ const Item = styled.div`
 `;
 
 const droppableStyle = {
+  
   backgroundColor: "yellow",
   width: "250px",
   height: "200px",
@@ -88,7 +100,7 @@ const [item, setItem] = useState(
       <div>
         <div className='addnew'>
         
-        <button className = 'btn btn-success ' style={{marginLeft:'30px', top:'100px'}} onClick={addNewItem}>Add</button>
+        <button className = 'btn btn-success ' style={{marginLeft:'1000px', top:'100px'}} onClick={addNewItem}>Add</button>
         </div>
         
         <Wrapper id='containerId'>
