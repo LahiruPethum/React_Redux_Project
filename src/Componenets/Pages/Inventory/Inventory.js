@@ -1,21 +1,34 @@
-import React from 'react'
-import AppDragDrop from './AppDragDrop'
-import NewItem from "./NewItem";
-function App() {
-    
+import React, { Component } from 'react'
+import styled from 'styled-components'
+import DragDrop from './DragDrop'
 
-    return (
-        <>
-        <NewItem/>
-        <AppDragDrop/>
-        <AppDragDrop />
-        <AppDragDrop/>
-        <AppDragDrop/>
-        <AppDragDrop />
-        
-        
-        </>
-    )
+const AppWrapper = styled.div`
+    display:flex;
+    justify-content:center;
+    margin-top:100px;
+`;
+
+const Container = styled.div`
+
+`;
+
+export default class App extends Component {
+    constructor(props){
+        super(props);
+
+        this.state={
+            checked:false
+        }
+    }
+    render() {
+        return (
+            <div>
+                <AppWrapper>
+                    <Container>
+                        <DragDrop/>
+                    </Container>
+                </AppWrapper>
+            </div>
+        )
+    }
 }
-
-export default App
