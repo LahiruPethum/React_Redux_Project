@@ -22,7 +22,7 @@ const Item = styled.div`
 const droppableStyle = {
   backgroundColor: "yellow",
   width: "250px",
-  height: "400px",
+  height: "200px",
   margin: "32px",
   padding:"10px",
   display:"flex"
