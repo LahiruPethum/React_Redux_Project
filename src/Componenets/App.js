@@ -56,7 +56,7 @@ function App() {
           <NavBar />
     </Router>
     </div>
-    <div class="col">
+    <div class="col-10">
     <Inventory/>
     </div>
     

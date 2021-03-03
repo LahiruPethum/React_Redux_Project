@@ -6,23 +6,23 @@ import Draggable from "./Draggable";
 import Droppable from "./Droppable";
 import './Inventory.css'
 
-const Wrapper = styled.div`
+// const Wrapper = styled.div`
 
-position: relative;
-margin: 10px;
-width: 100%;
-height: 100vh;
+// position: relative;
+// margin: 10px;
+// width: 100%;
+// height: 100vh;
 
-padding: 0;
-background-color: rgb(243, 228, 96);
+// padding: 0;
+// background-color: rgb(243, 228, 96);
 
-border-radius: 7px;
-float: left;
-flex-direction: row;
+// border-radius: 7px;
+// float: left;
+// flex-direction: row;
 
-    display: flex;
+//     display: flex;
   
-`;
+// `;
 
 const Item = styled.div`
   padding: 8px;
@@ -35,19 +35,50 @@ flex-direction: row;
 
 `;
 
-const droppableStyle = {
-  
+// const droppableStyle = {
+//   backgroundColor: "yellow",
+//   width: "200px",
+//   height: "100px",
+//   margin: "10px ",
+//   padding:"10px",
+//   display:"flex",
+//   position: "relative",
+//   display: 'flex'
+// ,
+ 
+// };
+
+
+const droppableStyle={
   backgroundColor: "yellow",
   width: "200px",
   height: "100px",
-  margin: "10px ",
+  margin: "5px ",
   padding:"10px",
   display:"flex",
-  position: "relative"
-};
+  position: "relative",
+  display: 'flex'
+}
 
-const containerId = {
+const Wrapper = {
+  position: 'relative',
+  margin: '10px',
+  width: '100%',
+  height: '85%',
+  
+  padding: '0',
+  backgroundColor: 'rgb(243, 228, 96)',
+  
+  borderRadius: '7px',
  
+  flexDirection: 'row',
+  
+      display: 'flex',
+}
+
+const buttonStyle ={
+  margin:'20px'
+
 }
 
 // function newItemComp (){
@@ -90,30 +121,34 @@ const [item, setItem] = useState(
     return item.map((aItem) => {
       return (
         <Draggable id={aItem.id} style={{ margin: "8px" }}>
-            <Item>item</Item>
+            <Item>Item{aItem.id}</Item>
           </Draggable>
       )
     })
   }
 
+  
+
+  var i=3;
   const addNewItem = () =>{
     const newItem = {
-      id:3,
+      id:i
       //name:item3
     }
     setItem((item)=>item.concat(newItem));
+    i++;
   }
 
 
     return (
-      <div className='container-drag'>
+      <div >
+        <button className = 'btn btn-success ' style={buttonStyle} onClick={addNewItem}>Add</button>
+        
+        <div style={Wrapper}>
         
         
-        <Wrapper id='containerId'>
-        <div className='addnew'>
         
-        <button className = 'btn btn-success ' style={{marginLeft:'0px', top:'10px'}} onClick={addNewItem}>Add</button>
-        </div>
+       
           <div> 
           <Droppable id="dr1" style={droppableStyle}>
 
@@ -160,9 +195,18 @@ const [item, setItem] = useState(
           
           </div> 
           
+          <div>
+          <Droppable  style={droppableStyle}/>
+          <Droppable  style={droppableStyle}/>
+          <Droppable  style={droppableStyle}/>
+          <Droppable  style={droppableStyle}/>
+          <Droppable  style={droppableStyle}/>
           
+
+          
+          </div> 
            
-        </Wrapper>
+        </div>
       </div>
     );
     

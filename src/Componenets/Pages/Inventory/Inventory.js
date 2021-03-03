@@ -1,16 +1,24 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+//import styled from 'styled-components'
 import DragDrop from './DragDrop'
 
-const AppWrapper = styled.div`
-    display:flex;
-    justify-content:center;
-    margin-top:100px;
-`;
+// const AppWrapper = styled.div`
+// display:flex;
+// justify-content:center;
+// margin-top:100px;
+// `;
 
-const Container = styled.div`
+// const Container = styled.div`
+// display:flex;
+//     justify-content:center;
+//     margin-top:100px;
+// `;
 
-`;
+const Appwrapper={
+    display:'flex',
+justifyContent:'left'
+}
+
 
 export default class App extends Component {
     constructor(props){
@@ -23,11 +31,11 @@ export default class App extends Component {
     render() {
         return (
             <div>
-                <AppWrapper>
-                    <Container>
+                <div style={Appwrapper}>
+                    <div className='Container'>
                         <DragDrop/>
-                    </Container>
-                </AppWrapper>
+                    </div>
+                </div>
             </div>
         )
     }
